@@ -41,6 +41,33 @@ class Tree:
             print(self.data)
             if(self.right != None):
                 self.right.inorder()
+                
+   def preorder(self):
+        if(type(self) == None):
+            return
+        else:
+            print(self.data)
+            
+            if(self.left != None):
+                self.left.preorder()
+            
+            if(self.right != None):
+                self.right.preorder()
+                
+    def postorder(self):
+        if(type(self) == None):
+            return
+        else:
+            
+            
+            if(self.left != None):
+                self.left.postorder()
+            
+            if(self.right != None):
+                self.right.postorder() 
+                
+            print(self.data)    
+                
             
 
     def height(self):
